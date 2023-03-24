@@ -6,7 +6,7 @@ const ErrorMessage= ({ variant = "info", children})=>{
         <Alert variant={variant} style={{ fontsize:20}}>
             <strong>{children}</strong>
         </Alert>
-    )
+    ) 
 }
 
 export default ErrorMessage;
