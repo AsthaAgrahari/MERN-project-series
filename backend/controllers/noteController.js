@@ -67,7 +67,7 @@ const createNote = asyncHandler(async (req, res) => {
     }
   
     if (note) {
-      await note.remove();
+      await Note.findByIdAndDelete(req.params.id);
       res.json({ message: "Note Removed" });
     } else {
       res.status(404);
