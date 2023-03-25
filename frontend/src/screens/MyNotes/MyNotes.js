@@ -100,7 +100,7 @@ const history=useHistory();
                 <blockquote className="blockquote mb-0">
                   <p>{note.content}</p>
                   <footer className="blockquote-footer">
-                    Creater on{" "}
+                    Created on{" "}
                     <cite title="Source Title">
                       {note.createdAt.substring(0, 10)}
                     </cite>
