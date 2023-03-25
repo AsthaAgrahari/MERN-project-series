@@ -38,24 +38,23 @@ const ProfileScreen = () => {
   }, [history, userInfo]);
   
   const postDetails = (pics) => {
-    if(!pic){
-      return setPicMessage("Please Select an Image");
-    }
+    // if(!pic){
+    //   return setPicMessage("Please Select an Image");
+    // }
     setPicMessage(null);
-    
     if (pics.type === "image/jpeg" || pics.type === "image/png") {
       const data = new FormData();
       data.append("file", pics);
       data.append("upload_preset", "notezipper");
-      data.append("cloud_name", "piyushproj");
-      fetch("https://api.cloudinary.com/v1_1/piyushproj/image/upload", {
+      data.append("cloud_name", "div7zmzme");
+      fetch("https://api.cloudinary.com/v1_1/div7zmzme/image/upload", {
         method: "post",
         body: data,
       })
         .then((res) => res.json())
         .then((data) => {
+          console.log(data);
           setPic(data.url.toString());
-          console.log(pic);
         })
         .catch((err) => {
           console.log(err);

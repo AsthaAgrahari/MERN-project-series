@@ -44,16 +44,17 @@ const submitHandler=async (e)=>{
 };
 
 const postDetails = (pics) => {
-    // if (
-    //   pics ===
-    //   "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg"
-    // ) {
-    //   return setPicMessage("Please Select an Image");
-    // }
-
-    if(!pic){
+    if (
+      pics ===
+      "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg"
+    ) {
       return setPicMessage("Please Select an Image");
     }
+
+    // if(!pic){
+    //   return setPicMessage("Please Select an Image");
+    // }
+    
     setPicMessage(null);
     if (pics.type === "image/jpeg" || pics.type === "image/png") {
       const data = new FormData();
