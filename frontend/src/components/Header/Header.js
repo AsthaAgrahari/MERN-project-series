@@ -33,6 +33,7 @@ const Header = ({ setSearch }) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav ClassName='m-auto'>
+          {userInfo && (
             <Form inline>
               <FormControl
                 type="text"
@@ -41,6 +42,8 @@ const Header = ({ setSearch }) => {
                 onChange={(e) => setSearch(e.target.value)}
               />
             </Form>
+          )}
+            
           </Nav>
 
           {userInfo ? <Nav>
